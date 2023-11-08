@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bu5ukmt0vndrw"]
+[gd_scene load_steps=5 format=3 uid="uid://bu5ukmt0vndrw"]
 
 [ext_resource type="Texture2D" uid="uid://owcdwapr3x13" path="res://Sprites/invSlot.png" id="1_7irb3"]
 [ext_resource type="Script" path="res://inventoryUI.gd" id="2_u8mt8"]
 [ext_resource type="Theme" uid="uid://d0o1sfeejllv1" path="res://button.tres" id="3_nqunf"]
+[ext_resource type="PackedScene" uid="uid://bfehhn712e7i1" path="res://button.tscn" id="4_svegi"]
 
 [node name="GUI" type="Control"]
 layout_mode = 3
@@ -35,56 +36,12 @@ patch_margin_right = 5
 patch_margin_bottom = 6
 script = ExtResource("2_u8mt8")
 
-[node name="Button" type="Button" parent="CanvasLayer/inventoryUI"]
+[node name="backButton" type="Button" parent="CanvasLayer/inventoryUI"]
 texture_filter = 1
 layout_mode = 0
 offset_left = 35.0
 offset_top = 5.0
 offset_right = 191.0
-offset_bottom = 85.0
-theme = ExtResource("3_nqunf")
-icon = ExtResource("1_7irb3")
-icon_alignment = 1
-
-[node name="Button2" type="Button" parent="CanvasLayer/inventoryUI"]
-texture_filter = 1
-layout_mode = 0
-offset_left = 196.0
-offset_top = 5.0
-offset_right = 352.0
-offset_bottom = 85.0
-theme = ExtResource("3_nqunf")
-icon = ExtResource("1_7irb3")
-icon_alignment = 1
-
-[node name="Button3" type="Button" parent="CanvasLayer/inventoryUI"]
-texture_filter = 1
-layout_mode = 0
-offset_left = 357.0
-offset_top = 5.0
-offset_right = 513.0
-offset_bottom = 85.0
-theme = ExtResource("3_nqunf")
-icon = ExtResource("1_7irb3")
-icon_alignment = 1
-
-[node name="Button4" type="Button" parent="CanvasLayer/inventoryUI"]
-texture_filter = 1
-layout_mode = 0
-offset_left = 518.0
-offset_top = 5.0
-offset_right = 674.0
-offset_bottom = 85.0
-theme = ExtResource("3_nqunf")
-icon = ExtResource("1_7irb3")
-icon_alignment = 1
-
-[node name="Button5" type="Button" parent="CanvasLayer/inventoryUI"]
-texture_filter = 1
-layout_mode = 0
-offset_left = 679.0
-offset_top = 5.0
-offset_right = 835.0
 offset_bottom = 85.0
 theme = ExtResource("3_nqunf")
 icon = ExtResource("1_7irb3")
@@ -109,3 +66,31 @@ offset_right = 30.0
 offset_bottom = 65.0
 theme = ExtResource("3_nqunf")
 icon_alignment = 1
+
+[node name="Button" parent="CanvasLayer/inventoryUI" instance=ExtResource("4_svegi")]
+layout_mode = 0
+offset_left = 196.0
+offset_top = 5.0
+offset_right = 352.0
+offset_bottom = 85.0
+
+[node name="Button2" parent="CanvasLayer/inventoryUI" instance=ExtResource("4_svegi")]
+layout_mode = 0
+offset_left = 357.0
+offset_top = 5.0
+offset_right = 513.0
+offset_bottom = 85.0
+
+[node name="Button3" parent="CanvasLayer/inventoryUI" instance=ExtResource("4_svegi")]
+layout_mode = 0
+offset_left = 518.0
+offset_top = 5.0
+offset_right = 674.0
+offset_bottom = 85.0
+
+[node name="Button4" parent="CanvasLayer/inventoryUI" instance=ExtResource("4_svegi")]
+layout_mode = 0
+offset_left = 679.0
+offset_top = 5.0
+offset_right = 835.0
+offset_bottom = 85.0

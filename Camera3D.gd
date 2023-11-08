@@ -1,16 +1,15 @@
 extends Camera3D
 
 var mouse = Vector2()
-var cube = preload("res://grass_cube.tscn")
-var water = preload("res://water_cube.tscn")
+var selected : PackedScene
+var using : String
+
 func _input(event):
 	if event is InputEventMouse:
 		mouse = event.position
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == MOUSE_BUTTON_LEFT:
-			get_selection(cube)
-		if event.button_index == MOUSE_BUTTON_RIGHT:
-			get_selection(water)
+			get_selection(selected)
 
 func get_selection(prefab):
 	var worldspace = get_world_3d().direct_space_state

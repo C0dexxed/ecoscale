@@ -1,29 +1,64 @@
 extends NinePatchRect
 
-var states = 0 #0=main,1=livingthings,2=terrain,3=buildings,4=plants,5=tools
-var page = 0
-#Main page: state0,page0 | 
+var state = 0 #0=main,1=livingthings,2=buildings,3=plants,4=tools
+
 var buttons = []
 
 func _ready():
 	for child in get_children():
 		buttons.append(child)
-	buttons[0].pressed.connect(self._pressed0)
+	for button in buttons:
+		if button.name == "backButton":
+			button.pressed.connect(self.back)
+		elif button.name == "rightScrollButton":
+			button.pressed.connect(self.scrollRight)
+			button.visible = false
+		elif button.name == "leftScrollButton":
+			button.pressed.connect(self.scrollLeft)
+			button.visible = false
+		elif button.name == "Button":
+			button.pressed.connect(self.button1)
+		elif button.name == "Button2":
+			button.pressed.connect(self.button2)
+		elif button.name == "Button3":
+			button.pressed.connect(self.button3)
+		elif button.name == "Button4":
+			button.pressed.connect(self.button4)
 
-func _pressed0():
-	pass
+func back():
+	state = 0
 
-func _pressed1():
-	pass
+func button1():
+	if state == 0:
+		pass #Got to category, change icons and prefabs of all other buttons
+	elif state == 4:
+		pass # Change camera USING, selected = empty
+	else:
+		pass # change camera selected
 
-func _pressed2():
-	pass
+func button2():
+	if state == 0:
+		pass
+	elif state == 4:
+		pass
+	else:
+		pass
 
-func _pressed3():
-	pass
+func button3():
+	if state == 0:
+		pass
+	elif state == 4:
+		pass
+	else:
+		pass
 
-func _pressed4():
-	pass
+func button4():
+	if state == 0:
+		pass
+	elif state == 4:
+		pass
+	else:
+		pass
 
 func scrollLeft():
 	pass
@@ -31,5 +66,3 @@ func scrollLeft():
 func scrollRight():
 	pass
 
-func setStateMain():
-	pass
