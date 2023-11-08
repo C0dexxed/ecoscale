@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://beyembu7bk2fh"]
+[gd_scene load_steps=4 format=3 uid="uid://beyembu7bk2fh"]
 
 [ext_resource type="Script" path="res://Camera3D.gd" id="1_h7xgw"]
 [ext_resource type="PackedScene" uid="uid://dndleed56c8mc" path="res://grass_cube.tscn" id="2_2owvp"]
+[ext_resource type="PackedScene" uid="uid://bu5ukmt0vndrw" path="res://gui.tscn" id="3_u4rgc"]
 
 [node name="World" type="Node3D"]
 
@@ -17,3 +18,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35564, 0, 0)
 
 [node name="grassCube3" parent="." instance=ExtResource("2_2owvp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35564, 0, 1.6413)
+
+[node name="GUI" parent="." instance=ExtResource("3_u4rgc")]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.458727, 0.888577, 0, -0.888577, 0.458727, 0, 8.98166, 6.59416)
