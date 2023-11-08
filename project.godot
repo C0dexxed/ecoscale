@@ -13,3 +13,7 @@ config_version=5
 config/name="EcoScale"
 run/main_scene="res://world.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/MagicaVoxel_Importer_with_Extensions/plugin.cfg")

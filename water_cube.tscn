@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bv0ua8hp2vif4"]
+
+[ext_resource type="Script" path="res://CustomResources/blockStates.gd" id="1_0wfg2"]
+[ext_resource type="ArrayMesh" uid="uid://qoj5ccn4736f" path="res://models/waterBlock.vox" id="2_u0h6q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nvud3"]
+
+[node name="waterCube" type="StaticBody3D"]
+script = ExtResource("1_0wfg2")
+builtOn = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, 0, 0, 0)
+mesh = ExtResource("2_u0h6q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_nvud3")
+
+[node name="Marker3D" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.98, 0)

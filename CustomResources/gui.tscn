@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://bu5ukmt0vndrw"]
+
+[ext_resource type="Texture2D" uid="uid://owcdwapr3x13" path="res://Sprites/invSlot.png" id="1_7irb3"]
+
+[node name="GUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="inventoryUI" type="NinePatchRect" parent="CanvasLayer"]
+texture_filter = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 20.0
+offset_top = -262.0
+offset_right = 320.0
+offset_bottom = 266.0
+grow_vertical = 2
+texture = ExtResource("1_7irb3")
+region_rect = Rect2(0, 0, 64, 65)
+patch_margin_left = 5
+patch_margin_top = 5
+patch_margin_right = 5
+patch_margin_bottom = 6
